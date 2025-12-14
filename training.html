@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illyrian Fight Club - Trajnimet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="training.css">
+    <script src="training.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-fist-raised logo-icon"></i>
+                <div class="logo-text">
+                   <h1>Illyrian Fight Club</h1>
+                    <span>KLUB I LUFTËS</span>
+                </div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Kryefaqja</a></li>
+                    <li><a href="training.html"><i class="fas fa-dumbbell"></i> Trajnimet</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-slideshow">
+        <div class="slide active" style="background-image: url('mma.jpg');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <h2 class="open-modal" data-art="MMA">Mixed Martial Arts</h2>
+                <p>Sistem i plotë i luftës. Kombinim i goditjeve dhe përleshjeve për mbrojtje vetjake dhe garat profesionale.</p>
+            </div>
+        </div>
+        
+        <div class="slide" style="background-image: url('boks.jpg');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <h2 class="open-modal" data-art="Boks">Boks</h2>
+                <p>Shkenca e ëmbël. Zhvilloni shpejtësinë, fuqinë dhe teknikat mbrojtëse në boks.</p>
+            </div>
+        </div>
+        
+        <div class="slide" style="background-image: url('wrestling.jpg');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <h2 class="open-modal" data-art="Wrestling">Wrestling</h2>
+                <p>Kontroll i tokës. Mësoni teknikat e rrëzimit dhe kontrollit në tokë.</p>
+            </div>
+        </div>
+        
+        <div class="slide" style="background-image: url('bjj.jpg');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <h2 class="open-modal" data-art="BJJ">Brazilian Jiu-Jitsu</h2>
+                <p>Arti i butë. Teknika të dorëzimit dhe kontrollit pozicional.</p>
+            </div>
+        </div>
+        
+        <div class="slide" style="background-image: url('judo.png');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <h2 class="open-modal" data-art="Judo">Judo</h2>
+                <p>Rrëzime dhe hedhje. Përdorni forcën e kundërshtarit kundër tij vetë.</p>
+            </div>
+        </div>
+        
+        <div class="slide" style="background-image: url('kickbox.jpg');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <h2 class="open-modal" data-art="Kickboxing">Kickboxing</h2>
+                <p>Goditje dinamike. Kombinim i goditjeve me grushte dhe me këmbë.</p>
+            </div>
+        </div>
+        
+        <div class="slide" style="background-image: url('muay thai.jpg');">
+            <div class="slide-overlay"></div>
+            <div class="slide-content">
+                <h2 class="open-modal" data-art="Muay Thai">Muay Thai</h2>
+                <p>Arti i tetë gjymtyrëve. Teknika tradicionale tajlandeze me bërryla dhe gjunjë.</p>
+            </div>
+        </div>
+        
+        <div class="slideshow-controls">
+            <div class="slideshow-dots" id="dots"></div>
+            <div class="slideshow-nav">
+                <button class="nav-btn" id="prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="nav-btn" id="next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-header">
+                <h3 id="modal-title">MMA - Mixed Martial Arts</h3>
+            </div>
+            
+            <div class="modal-body">
+                <div class="modal-layout">
+                    <div class="sport-details">
+                        <div class="sport-image" id="sport-image"></div>
+                        
+                        <div class="specifications">
+                            <h4>Karakteristikat</h4>
+                            <ul class="spec-list" id="spec-list"></ul>
+                        </div>
+                    </div>
+                    
+                    <div class="pricing-registration">
+                        <div class="pricing-card">
+                            <h4>Çmimi i Trajnimit</h4>
+                            <div class="price-display" id="price-display">25€<span>/muaj</span></div>
+                            <button class="register-btn" id="register-btn">Regjistrohu Tani</button>
+                        </div>
+                        
+                        <div class="registration-form" id="registration-form">
+                            <h4 class="form-title">Regjistrohu për Trajnim</h4>
+                            <div class="form-group">
+                                <label for="name">Emri i Plotë</label>
+                                <input type="text" id="name" placeholder="Shkruani emrin tuaj">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Numri i Telefonit</label>
+                                <input type="tel" id="phone" placeholder="Shkruani numrin e telefonit">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="Shkruani email-in tuaj">
+                            </div>
+                            <div class="form-actions">
+                                <button class="form-btn submit-btn" id="submit-registration">Perfundo</button>
+                                <button class="form-btn cancel-btn" id="cancel-registration">Anulo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="schedule-section">
+                    <h4>Orari i Trajnimeve</h4>
+                    <table class="schedule-table" id="schedule">
+                        <thead>
+                            <tr>
+                                <th>Dita</th>
+                                <th>Koha</th>
+                            </tr>
+                        </thead>
+                        <tbody id="schedule-body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Illyrian Fight Club</h3>
+                    <p>Klubi më i mirë i arteve mikse marciale në Kosovë.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Lidhje</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Kryefaqja</a></li>
+                        <li><a href="training.html">Trajnimet</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Kontakt</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-phone"></i> +383 45 965 922</li>
+                        <li><i class="fas fa-envelope"></i> illyrianfightclub@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Ali Ajeti, Podujeve, Kosovë</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Illyrian Fight Club. Të gjitha të drejtat e rezervuara.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+
+</html>
+
